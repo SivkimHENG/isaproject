@@ -2,8 +2,8 @@
 [x] Supplier
 [x] Customer
 [x] Product
-[]  OrderDetail
-[]  Payments
+[x]  OrderDetail
+[x]  Payments
 []  ImportDetail
 
 

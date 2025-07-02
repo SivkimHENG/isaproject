@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ImportController;
 use App\Http\Controllers\OrderControlller;
 use App\Http\Controllers\OrderDetailsController;
 use App\Http\Controllers\PaymentController;
@@ -61,6 +62,19 @@ Route::delete('/customers/{id}', [CustomerController::class, 'destroy'])->name('
 
 Route::get('/orders',[OrderControlller::class,'index'])->name('order.index');
 Route::post('/orders',[OrderControlller::class,'store'])->name('order.store');
+
+
+
+Route::get('/payments',[PaymentController::class,'index'])->name('payment.index');
+Route::get('/payments/{id}', [PaymentController::class,'getRemainingAmount'])->name('payment.remaining.amount');
+Route::post('/payments',[PaymentController::class,'store'])->name('payment.store');
+Route::get('/orders/{order}/remaining-amount', [PaymentController::class, 'getRemainingAmount'])
+    ->name('orders.remaining-amount');
+
+
+
+Route::get('/imports',[ImportController::class,'index'])->name('import.index');
+Route::post('/imports',[ImportController::class,'store'])->name('import.store');
 
 
 

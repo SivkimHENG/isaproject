@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('imports', function (Blueprint $table) {
             $table->increments('id');
             $table->date('import_date');
-            $table->unsignedTinyInteger('staff_id');
-            $table->unsignedTinyInteger('supplier_id');
+            $table->unsignedInteger('staff_id');
+            $table->unsignedInteger('supplier_id');
             $table->decimal('total', 19,4);
 
             $table->foreign('staff_id')->references('id')->on('staffs');

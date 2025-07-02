@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('import_details', function (Blueprint $table) {
-            $table->unsignedTinyInteger('import_id');
-            $table->unsignedTinyInteger('product_id');
+            $table->unsignedInteger('import_id');
+            $table->unsignedInteger('product_id');
             $table->smallInteger('quantity');
             $table->decimal('price', 19,4);
             $table->decimal('amount', 19,4);

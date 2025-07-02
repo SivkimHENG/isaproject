@@ -28,7 +28,7 @@ class OrderControlller extends Controller
             })
             ->get();
 
-        return Inertia::render('Sale/Index', [
+        return Inertia::render('Order/Index', [
             'orders' => $orders,
             'products' => $products,
             'customers' => $customers,
