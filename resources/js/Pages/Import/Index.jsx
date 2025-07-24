@@ -26,6 +26,7 @@ import {
     Trash2,
     Eye,
 } from "lucide-react";
+import ManageLayout from "@/Layouts/ManageLayout";
 
 export default function Index() {
     const {
@@ -139,19 +140,11 @@ export default function Index() {
     };
 
     return (
-        <>
-            <Head title="Import Management" />
-            <div className="min-h-screen bg-gray-50">
-                <header className="bg-white shadow-sm border-b">
-                    <div className="max-w-7xl mx-auto px-4 py-4">
-                        <h1 className="text-2xl font-bold">Business Management System</h1>
-                        <p className="text-gray-600">
-                            Manage orders, payments, and inventory imports
-                        </p>
-                    </div>
-                </header>
-
-                <main className="max-w-7xl mx-auto px-4 py-6">
+        <ManageLayout>
+            <div className="container mx-auto p-6">
+                <h1 className="text-3xl font-bold text-gray-900">Business Management System</h1>
+                <p className="text-gray-600 mt-2">Manage your sales orders and inventory</p>
+                <main >
                     {/* Stats */}
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
                         <Card>
@@ -481,6 +474,7 @@ export default function Index() {
                     </div>
                 </main>
             </div>
-        </>
+
+        </ManageLayout>
     );
 }

@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { AlertCircle, DollarSign, Package } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import axios from "axios";
+import ManageLayout from "@/Layouts/ManageLayout";
 
 
 
@@ -73,7 +74,7 @@ export default function Index() {
 
     return (
 
-        <>
+        <ManageLayout>
 
             <div className="container mx-auto p-6">
                 <div className="mb-6 ">
@@ -343,7 +344,7 @@ export default function Index() {
                 </div>
 
             </div>
-        </>
+        </ManageLayout >
 
     );
 }
